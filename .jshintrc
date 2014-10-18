@@ -1,0 +1,8 @@
+{
+  "node": true,
+  "camelcase": true,
+  "curly": true,
+  "eqeqeq": true,
+  "eqnull": true,
+  "unused": true
+}
