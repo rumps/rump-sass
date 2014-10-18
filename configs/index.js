@@ -43,7 +43,7 @@ exports.rebuild = function() {
       rump.configs.main.paths.destination.sass,
       rump.configs.main.paths.destination.images);
   }
-  if(rump.configs.main.style.minify) {
+  if(rump.configs.main.styles.minify) {
     sassDefaults.outputStyle = 'compressed';
   }
 
