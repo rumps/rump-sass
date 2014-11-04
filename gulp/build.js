@@ -9,7 +9,7 @@ var sass = require('gulp-sass');
 var sourcemaps = require('gulp-sourcemaps');
 var util = require('gulp-util');
 
-gulp.task('rump:build:sass', function() {
+gulp.task(rump.taskName('build:sass'), function() {
   var source = path.join(rump.configs.main.paths.source.root,
                          rump.configs.main.paths.source.sass,
                          rump.configs.main.globs.build.sass);
@@ -26,4 +26,4 @@ gulp.task('rump:build:sass', function() {
   .pipe(gulp.dest(destination));
 });
 
-gulp.tasks['rump:build'].dep.push('rump:build:sass');
+gulp.tasks[rump.taskName('build')].dep.push(rump.taskName('build:sass'));

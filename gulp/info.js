@@ -7,7 +7,7 @@ var path = require('path');
 var rump = require('rump');
 var pkg = require('../package');
 
-gulp.task('rump:info:sass', function() {
+gulp.task(rump.taskName('info:sass'), function() {
   var glob = path.join(rump.configs.main.paths.source.root,
                        rump.configs.main.paths.source.sass,
                        rump.configs.main.globs.build.sass);
@@ -43,4 +43,4 @@ gulp.task('rump:info:sass', function() {
   console.log();
 });
 
-gulp.tasks['rump:info'].dep.push('rump:info:sass');
+gulp.tasks[rump.taskName('info')].dep.push(rump.taskName('info:sass'));
