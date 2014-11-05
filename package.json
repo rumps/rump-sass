@@ -15,13 +15,11 @@
     "extend": "^2.0.0",
     "globule": "^0.2.0",
     "require-all": "^0.0.8",
+    "rump": "^0.4.0",
     "gulp-autoprefixer": "^1.0.1",
     "gulp-plumber": "^0.6.6",
     "gulp-sass": "^1.1.0",
     "gulp-sourcemaps": "^1.2.2",
     "gulp-util": "^3.0.1"
-  },
-  "peerDependencies": {
-    "rump": "^0.3.0"
   }
 }
