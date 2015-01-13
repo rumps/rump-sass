@@ -14,7 +14,7 @@ information, visit the
 ## API
 The following is appended to the core Rump API:
 
-### `rump.addGulpTasks()`
+### `rump.addGulpTasks(options)`
 This module adds the following tasks:
 
 - `build:sass` will process SCSS stylesheets with Sass and Autoprefixer. For
