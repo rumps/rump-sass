@@ -10,9 +10,9 @@ var sourcemaps = require('gulp-sourcemaps');
 var util = require('gulp-util');
 
 gulp.task(rump.taskName('build:sass'), function() {
-  var source = path.join(rump.configs.main.paths.source.root,
-                         rump.configs.main.paths.source.sass,
-                         rump.configs.main.globs.build.sass);
+  var sourcePath = path.join(rump.configs.main.paths.source.root,
+                             rump.configs.main.paths.source.sass);
+  var source = path.join(sourcePath, rump.configs.main.globs.build.sass);
   var destination = path.join(rump.configs.main.paths.destination.root,
                               rump.configs.main.paths.destination.sass);
   var sourceMap = rump.configs.main.styles.sourceMap;
@@ -23,7 +23,9 @@ gulp.task(rump.taskName('build:sass'), function() {
     .pipe((sourceMap ? sourcemaps.init : util.noop)())
     .pipe(sass(rump.configs.sass))
     .pipe(autoprefixer(rump.configs.autoprefixer))
-    .pipe((sourceMap ? sourcemaps.write : util.noop)())
+    .pipe((sourceMap ? sourcemaps.write : util.noop)({
+      sourceRoot: path.resolve(sourcePath)
+    }))
     .pipe(gulp.dest(destination));
 });
 
