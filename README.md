@@ -41,11 +41,11 @@ This is the directory where styles are copied to. This path is relative to the
 root destination path. (If the default root and Sass path is used, then the
 path would be `dist/styles`)
 
-#### `options.globs.build.sass` (`'*.scss`)
+#### `options.globs.build.sass` (`'*.scss'`)
 This specifies which stylesheets to process. By default it processes all SCSS
 files in the immediate directory of the root source path for styles.
 
-#### `options.globs.watch.sass` (`'**/*.scss`)
+#### `options.globs.watch.sass` (`'**/*.scss'`)
 This specifies which stylesheets to monitor for changes. By default it watches
 all SCSS files in the root source path for styles, including those in
 subdirectories.
