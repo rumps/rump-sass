@@ -21,7 +21,11 @@ gulp.task(rump.taskName('build:sass'), function() {
     .src([source].concat(rump.configs.main.globs.global))
     .pipe((rump.configs.watch ? plumber : util.noop)())
     .pipe((sourceMap ? sourcemaps.init : util.noop)())
-    .pipe(sass(rump.configs.sass))
+    .pipe(sass(rump.configs.sass).on('error', function(err) {
+      var pluginErr = new util.PluginError(rump.taskName('build:sass'), err);
+      util.log(pluginErr.toString());
+      this.emit('end');
+    }))
     .pipe(autoprefixer(rump.configs.autoprefixer))
     .pipe((sourceMap ? sourcemaps.write : util.noop)({
       sourceRoot: path.resolve(sourcePath)
