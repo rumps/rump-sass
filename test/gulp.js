@@ -10,7 +10,7 @@ var sinon = require('sinon');
 var rump = require('../lib');
 var configs = require('../lib/configs');
 
-describe('rump less tasks', function() {
+describe('rump sass tasks', function() {
   var original;
 
   before(function() {
