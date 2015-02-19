@@ -9,6 +9,9 @@
     "type": "git",
     "url": "https://github.com/rumps/rump-sass"
   },
+  "scripts": {
+    "test": "jshint lib test && mocha"
+  },
   "main": "./lib",
   "dependencies": {
     "extend": "^2.0.0",
@@ -19,5 +22,16 @@
     "gulp-sass": "^1.1.0",
     "gulp-sourcemaps": "^1.2.2",
     "gulp-util": "^3.0.1"
+  },
+  "devDependencies": {
+    "better-assert": "^1.0.2",
+    "graceful-fs": "^3.0.5",
+    "jshint": "^2.6.0",
+    "lodash": "^3.2.0",
+    "gulp": "^3.8.8",
+    "mocha": "^2.1.0",
+    "normalize-compass": "^3.0.1",
+    "rump": "^0.6.0",
+    "sinon": "^1.12.2"
   }
 }
