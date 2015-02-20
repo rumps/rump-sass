@@ -8,8 +8,7 @@ environment:
 
 install:
   - ps: Install-Product node $env:nodejs_version
-  - set PATH=C:\python27;%PATH%
-  - npm install --msvs_version=2013
+  - npm install
 
 test_script:
   - node --version
@@ -17,3 +16,7 @@ test_script:
   - npm test
 
 build: off
+
+matrix:
+  allow_failures:
+    - nodejs_version: "1"
