@@ -6,4 +6,4 @@ node_js:
   - iojs
 matrix:
   allow_failures:
-    - nodejs: iojs
+    - node_js: iojs
