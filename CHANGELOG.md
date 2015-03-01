@@ -1,5 +1,8 @@
 # Changelog
 
+#### 0.6.2
+- Rewrite source map
+
 #### 0.6.1
 - Fix watch task not rerunning after error
 
