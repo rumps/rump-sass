@@ -109,6 +109,7 @@ describe('rump sass tasks', function() {
             .getProperty('sources')
             .filter(identity)
             .map(checkIfExists);
+      assert(exists.length === 3);
       exists.forEach(assert);
     }));
 
