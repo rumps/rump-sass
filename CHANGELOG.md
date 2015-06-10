@@ -1,5 +1,9 @@
 # Changelog
 
+#### 0.6.3
+- Fix checking of unneeded source maps
+- Update packages
+
 #### 0.6.2
 - Rewrite source map
 
