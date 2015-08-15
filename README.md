@@ -1,3 +1,5 @@
+# DEPRECATED - As of Rump 0.7.0 use [Rump Styles](https://github.com/rumps/styles)
+
 # Rump Sass
 [![NPM](http://img.shields.io/npm/v/rump-sass.svg?style=flat-square)](https://www.npmjs.org/package/rump-sass)
 ![License](http://img.shields.io/npm/l/rump-sass.svg?style=flat-square)
